@@ -22,7 +22,7 @@ app.use('/site', express.static(path.join(__dirname,'public')));
 
 app.use(express.json());
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('index', {
         title: 'My Friends Are VERY Clever',
         caption: 'Let\'s go skiing!',
